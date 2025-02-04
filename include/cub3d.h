@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mintan <mintan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mintan <mintan@stuident.42singapore.sg>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 15:52:13 by mintan            #+#    #+#             */
-/*   Updated: 2025/02/04 11:43:28 by mintan           ###   ########.fr       */
+/*   Updated: 2025/02/04 12:12:29 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRACTOL_H
-# define FRACTOL_H
+#ifndef CUB_H
+# define CUB_H
 
 # include <mlx.h>
 # include <math.h>
@@ -24,6 +24,9 @@
 # define WIN_LEN 800.0
 # define WIN_NAME "SANZAI-D"
 # define COLOR_BLACK 0x000000
+# define COLOR_WHITE 0xFFFFFF
+# define COLOR_TEAL 0x20d3ba
+
 
 typedef struct s_img
 {
@@ -66,7 +69,7 @@ int		close_window(t_cub *cub);
 
 // /* Draw Fractal functions */
 // int		check_mandelbrot(t_cmplx input, int no_iter);
-// int		draw_fractal(t_img *img, t_fract *fract);
+int		draw_fractal(t_img *img, t_cub *cub);
 // int		check_julia(t_cmplx input, t_cmplx c_term, int no_iter);
 
 

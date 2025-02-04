@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mintan <mintan@student.42.fr>              +#+  +:+       +#+         #
+#    By: mintan <mintan@stuident.42singapore.sg>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/15 22:10:59 by mintan            #+#    #+#              #
-#    Updated: 2025/02/04 11:33:48 by mintan           ###   ########.fr        #
+#    Updated: 2025/02/04 12:07:59 by mintan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ MLX_LIB = $(MLXDIR)/libmlx_Linux.a
 
 
 # MJ TO POPULATE LATER
-CUB3D_SRCS = $(SRCDIR)/main.c $(SRCDIR)/init_cub.c $(SRCDIR)/init_events.c
+CUB3D_SRCS = $(SRCDIR)/main.c $(SRCDIR)/init_cub.c $(SRCDIR)/init_events.c \
+             $(SRCDIR)/draw_fractal.c
 CUB3D_OBJ = $(CUB3D_SRCS:.c=.o)
 
 # Target to make using Make all
@@ -56,7 +57,7 @@ $(MLX_LIB):
 		echo "mlx library present already"; \
 	fi
 
-# Generate all the .o files from the .c files for fractol
+# Generate all the .o files from the .c files for cub3d
 %.o: %.c
 	$(CC) -c $(CFLAGS) $(INC) $< -o $@
 

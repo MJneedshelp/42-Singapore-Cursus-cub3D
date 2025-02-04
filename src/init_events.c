@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_events.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mintan <mintan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mintan <mintan@stuident.42singapore.sg>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 14:04:54 by mintan            #+#    #+#             */
-/*   Updated: 2025/02/04 11:42:13 by mintan           ###   ########.fr       */
+/*   Updated: 2025/02/04 12:08:13 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int	no_event(t_cub *cub)
 {
 	if (cub->event == 1)
 	{
-		// draw_game(&(cub->img), cub);
+		draw_fractal(&(cub->img), cub);
 		cub->event = 0;
 	}
 	return (0);

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+         #
+#    By: mintan <mintan@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/15 22:10:59 by mintan            #+#    #+#              #
-#    Updated: 2024/09/15 16:06:39 by mintan           ###   ########.fr        #
+#    Updated: 2025/02/04 11:33:48 by mintan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ MLX_LIB = $(MLXDIR)/libmlx_Linux.a
 
 
 # MJ TO POPULATE LATER
-CUB3D_SRCS = $(SRCDIR)/main.c $(SRCDIR)/init_cub.c 
+CUB3D_SRCS = $(SRCDIR)/main.c $(SRCDIR)/init_cub.c $(SRCDIR)/init_events.c
 CUB3D_OBJ = $(CUB3D_SRCS:.c=.o)
 
 # Target to make using Make all
@@ -37,8 +37,8 @@ all: $(NAME) print_art
 
 # Generate the mandatory programme by compiling the objects with libft.a
 # and libmlx_Linux.a
-$(NAME): $(LIBFT_LIB) $(MLX_LIB) $(FRACTOL_OBJ)
-	$(CC) $(CFLAGS) $(FRACTOL_OBJ) $(LIBFT_LIB) $(LIBFLAGS) -o $@
+$(NAME): $(LIBFT_LIB) $(MLX_LIB) $(CUB3D_OBJ)
+	$(CC) $(CFLAGS) $(CUB3D_OBJ) $(LIBFT_LIB) $(LIBFLAGS) -o $@
 
 # Build the libft.a library
 $(LIBFT_LIB):

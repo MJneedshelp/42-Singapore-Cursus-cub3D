@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 01:09:25 by mintan            #+#    #+#             */
-/*   Updated: 2025/02/04 10:59:44 by mintan           ###   ########.fr       */
+/*   Updated: 2025/02/04 11:36:56 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 	  takes place
 */
 
-t_cub	init_cub(char *argv[])
+t_cub	init_cub(void)
 {
 	t_cub	cub;
 
